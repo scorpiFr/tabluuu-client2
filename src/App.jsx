@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import config from "./config";
+import config from "./Config";
 import sendMail_brevo from "./Components/sendMail_brevo";
 import Footer from "./Footer";
 import Loader from "./Components/Loader";
