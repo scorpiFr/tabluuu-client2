@@ -1,42 +1,289 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.App {
   text-align: center;
+  background-color: #b0b1b3;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.App-resto {
+  text-align: center;
+  background-color: #c27c42;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-bar {
+  text-align: center;
+  background-color: #b0b1b3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.title {
+  font-family: "Chewy";
+  font-size: 22px;
 }
 
-.card {
-  padding: 2em;
+.error {
+  color: red;
+  font-size: 50px;
+  font-weight: bold;
 }
 
-.read-the-docs {
-  color: #888;
+.itemTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.panierItemTitle {
+  font-size: 15px;
+  font-weight: normal;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.lineHeader {
+  text-align: left;
+  padding-left: 20px;
+  background-color: #000;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.lineHeader:first-letter {
+  text-transform: uppercase;
+}
+
+.panierHeader {
+  text-align: center;
+  padding-left: 20px;
+  background-color: #000;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+textarea {
+  width: 300px;
+  height: 100px;
+}
+
+textarea:disabled {
+  width: 300px;
+  height: 100px;
+  background-color: #a0a0a0;
+}
+
+.lineList1 {
+  max-width: 50vw;
+}
+
+.lineList2 {
+  max-width: 100vw;
+}
+
+.flex-container1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  /*background-color: dodgerblue;*/
+  padding: 10px;
+  max-width: 100vw;
+}
+
+.flex-container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  /*background-color: dodgerblue;*/
+  padding: 10px;
+  max-width: 100vw;
+}
+
+img.itemPreview {
+  max-height: 50px;
+  max-width: 50px;
+  height: auto;
+  width: auto;
+}
+
+.cadre {
+  text-align: left;
+  padding: 1px;
+  display: flex;
+  margin: 1px;
+  max-width: 50vw;
+}
+
+.cadre image {
+  text-align: left;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.cadre .texte {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.orderCommentaryLine {
+  text-align: left;
+  padding-left: 10px;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 5px;
+}
+
+/* CSS */
+.minibutton-20 {
+  appearance: button;
+  background-color: #4d4ae8;
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+  border: 1px solid #4d4ae8;
+  border-radius: 0.5rem;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset,
+    rgba(46, 54, 80, 0.075) 0 1px 1px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, sans-serif;
+  font-size: 0.5rem;
+  font-weight: 500;
+  line-height: 0.5;
+  margin: 0;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  text-transform: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.minibutton-20:disabled {
+  background-image: none;
+  box-shadow: none;
+  opacity: 0.65;
+  pointer-events: none;
+  border-color: gray;
+  background-color: gray;
+}
+
+.button-20 {
+  appearance: button;
+  background-color: #4d4ae8;
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+  border: 1px solid #4d4ae8;
+  border-radius: 1rem;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset,
+    rgba(46, 54, 80, 0.075) 0 1px 1px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-transform: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-20:focus:not(:focus-visible),
+.button-20:focus {
+  outline: 0;
+}
+
+.button-20:hover {
+  background-color: #3733e5;
+  border-color: #3733e5;
+}
+
+.button-20:focus {
+  background-color: #413fc5;
+  border-color: #3e3bba;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset,
+    rgba(46, 54, 80, 0.075) 0 1px 1px, rgba(104, 101, 235, 0.5) 0 0 0 0.2rem;
+}
+
+.button-20:active {
+  background-color: #3e3bba;
+  background-image: none;
+  border-color: #3a38ae;
+  box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset;
+}
+
+.button-20:active:focus {
+  box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset,
+    rgba(104, 101, 235, 0.5) 0 0 0 0.2rem;
+}
+
+.button-20:disabled {
+  background-image: none;
+  box-shadow: none;
+  opacity: 0.65;
+  pointer-events: none;
+  border-color: gray;
+  background-color: gray;
+}
+
+.commentaryExample {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.buttons {
+  white-space: nowrap;
+}
+
+.tooltip1 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.tooltip2 {
+  background-color: #808080;
+  color: #000000;
+  border-radius: 50%;
+  padding: 2px 7px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.tooltip3 {
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  transition: opacity 0.3s;
 }
