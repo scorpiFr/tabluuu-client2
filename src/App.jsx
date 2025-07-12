@@ -128,9 +128,27 @@ export default function App() {
     return data;
   }
 
+  function redirectIfNeeded() {
+    // if no barid and no table, redirect to avoid endless 404 errors on google
+    if (config.barId && config.table) {
+      return false;
+    }
+    const origin = window.location.origin;
+    let newUrl = "";
+    if (!config.barId || !config.barId.length) {
+      newUrl = `${origin}/?barid=8&table=table_inconnue`;
+    } else if (!config.table) {
+      newUrl = `${origin}/?barid=${config.barId}&table=table_inconnue`;
+    }
+    window.location.href = newUrl;
+    return true;
+  }
+
   useEffect(
     function () {
-      fetchBarData();
+      if (!redirectIfNeeded()) {
+        fetchBarData();
+      }
       return function () {};
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
