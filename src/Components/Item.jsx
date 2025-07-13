@@ -1,5 +1,4 @@
 export default function Item({ item, imageDirectory }) {
-  console.log(item);
   if (item.image) {
     return item.image_mode === "vertical" ? (
       <ItemVertical item={item} imageDirectory={imageDirectory} />
@@ -15,11 +14,12 @@ function ItemNoimage({ item }) {
   return (
     <div className="cadre">
       <div className="texte">
-        <p className="itemTitle">{item.name}</p>
+        <p className="itemTitle">
+          {item.name} - {item.price} €
+        </p>
         {item.description.length && (
           <p className="itemDescription">{item.description}</p>
         )}
-        <p className="itemPrice">{item.price} €</p>
       </div>
     </div>
   );
@@ -72,11 +72,12 @@ function ItemHorizontal({ item, imageDirectory }) {
             />
           </a>
         </div>
-        <p className="itemTitle">{item.name}</p>
+        <p className="itemTitle">
+          {item.name} - {item.price} €
+        </p>
         {item.description.length && (
           <p className="itemDescription">{item.description}</p>
         )}
-        <p className="itemPrice">{item.price} €</p>
       </div>
     </div>
   );
