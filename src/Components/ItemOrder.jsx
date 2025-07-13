@@ -59,7 +59,7 @@ function ItemNoImage({
         <p className="itemTitle">
           {itemData.name} - {itemData.price} €
         </p>
-        {itemData.description.length && (
+        {itemData.description.length > 0 && (
           <p className="itemDescription">{itemData.description}</p>
         )}
         <ItemButtons
@@ -102,7 +102,7 @@ function ItemVertical({
       </div>
       <div className="texte">
         <p className="itemTitle">{itemData.name}</p>
-        {itemData.description.length && (
+        {itemData.description.length > 0 && (
           <p className="itemDescription">{itemData.description}</p>
         )}
         <p className="itemPrice">{itemData.price} €</p>
@@ -148,7 +148,7 @@ function ItemHorizontal({
         <p className="itemTitle">
           {itemData.name} - {itemData.price} €
         </p>
-        {itemData.description.length && (
+        {itemData.description.length > 0 && (
           <p className="itemDescription">{itemData.description}</p>
         )}
         <ItemButtons
