@@ -76,12 +76,14 @@
 }
 
 textarea {
-  width: 300px;
+  width: 90vw;
+  max-width: 500px;
   height: 100px;
 }
 
 textarea:disabled {
-  width: 300px;
+  width: 90vw;
+  max-width: 500px;
   height: 100px;
   background-color: #a0a0a0;
 }
