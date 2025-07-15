@@ -300,3 +300,7 @@ img.itemPreview {
   opacity: 1;
   transition: opacity 0.3s;
 }
+
+form {
+  margin-bottom: 5px;
+}
